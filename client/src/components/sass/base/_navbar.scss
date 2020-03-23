@@ -1,0 +1,19 @@
+#navbar-main {
+  background-color: black;
+
+  a {
+    color: $off-white;
+    text-decoration: none;
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+nav ul li {
+  cursor: pointer;
+  //   padding: 0.1rem;
+}

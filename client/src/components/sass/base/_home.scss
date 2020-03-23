@@ -18,6 +18,8 @@
 
   input {
     font-size: 1.3rem;
+    background-color: $off-white;
+    border: none;
   }
 
   button {
@@ -42,8 +44,8 @@
   color: white;
   font-size: 4.5rem;
   font-weight: 400;
-  letter-spacing: 0.2rem;
-  padding-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  padding-bottom: 0.1rem;
   text-transform: uppercase;
 }
 
@@ -52,7 +54,7 @@
   color: $royal-yellow;
   word-spacing: 0.1rem;
   text-transform: capitalize;
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
 #home-btn {

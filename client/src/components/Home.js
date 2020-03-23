@@ -15,12 +15,6 @@ const Home = () => {
         <div id="home-btn">
           <button>Search</button>
         </div>
-        <div>
-          <Link to="/jobs">View all jobs</Link>
-        </div>
-        <div>
-          <Link to="/jobs/add">Add a new job</Link>
-        </div>
       </div>
     </div>
   );

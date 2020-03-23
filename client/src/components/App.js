@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import AllJobs from "./AllJobs";
 import AddJob from "./AddJob";
+import Navbar from "./Navbar";
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Fragment>
         <Route exact path="/" component={Home} />
         <Switch>
