@@ -1,5 +1,6 @@
 #navbar-main {
   background-color: black;
+  opacity: 0.8;
 
   a {
     color: $off-white;
@@ -15,5 +16,6 @@ nav ul {
 
 nav ul li {
   cursor: pointer;
-  //   padding: 0.1rem;
+  font-size: 1.1rem;
+  padding: 0.2rem;
 }

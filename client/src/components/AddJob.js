@@ -4,13 +4,13 @@ import axios from "axios";
 
 const AddJob = () => {
   return (
-    <div id="main">
-      <div id="main-secondary">
-        <div>
-          <Link to="/">Home</Link>
-        </div>
-        <div>
-          <Link to="/jobs">All Jobs</Link>
+    <div id="post-main">
+      <div id="post-secondary">
+        <div id="form-main">
+          <h1>Add a New Opporunity Below</h1>
+          <form-secondary>
+            <input />
+          </form-secondary>
         </div>
       </div>
     </div>

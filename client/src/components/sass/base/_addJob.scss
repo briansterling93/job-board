@@ -1,0 +1,34 @@
+#post-main {
+  display: flex;
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  color: $off-white;
+  align-items: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(25, 26, 25, 0.8),
+      rgba(51, 51, 51, 0.8),
+      rgba(64, 64, 64, 0.8)
+    ),
+    url("https://www.pokalalaw.com/wp-content/uploads/2017/08/business-checklist-for-success.jpg");
+  // https://p0.piqsels.com/preview/59/373/316/person-typing-on-laptop-computer.jpg
+  // https://miro.medium.com/max/2800/0*SJUI8Ntvn6D6WMDu.jpg
+  background-size: cover;
+
+  input {
+    font-size: 1.3rem;
+  }
+}
+#post-secondary {
+  display: flex;
+  justify-content: center;
+  height: 40rem;
+  width: 40rem;
+  opacity: 0.7;
+  border-radius: 1rem;
+  background-color: black;
+}
+
+#form-secondary {
+}
