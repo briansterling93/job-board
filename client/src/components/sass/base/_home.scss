@@ -18,17 +18,34 @@
 
   input {
     font-size: 1.3rem;
-    background-color: $off-white;
+    height: 2.5rem;
+    background-color: white;
     border: none;
   }
 
+  // button {
+  //   font-size: 1.2rem;
+  //   font-weight: 700;
+  //   background-color: white;
+  //   border: none;
+  //   color: black;
+  //   cursor: pointer;
+  //   width: 7rem;
+  //   height: 2rem;
+  //   border-radius: 2rem;
+  // }
+
   button {
-    font-size: 1.2rem;
-    background-color: white;
-    border: none;
-    color: black;
+    height: 2rem;
+    width: 10rem;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: 0.5px solid white;
     cursor: pointer;
-    width: 5rem;
   }
 }
 

@@ -11,7 +11,7 @@
       rgba(51, 51, 51, 0.8),
       rgba(64, 64, 64, 0.8)
     ),
-    url("https://www.pokalalaw.com/wp-content/uploads/2017/08/business-checklist-for-success.jpg");
+    url("https://p0.piqsels.com/preview/59/373/316/person-typing-on-laptop-computer.jpg");
   // https://p0.piqsels.com/preview/59/373/316/person-typing-on-laptop-computer.jpg
   // https://miro.medium.com/max/2800/0*SJUI8Ntvn6D6WMDu.jpg
   background-size: cover;
@@ -19,16 +19,58 @@
   input {
     font-size: 1.3rem;
   }
+
+  button {
+    height: 2rem;
+    width: 10rem;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    font-weight: 700;
+    outline: none;
+    border: 0.5px solid white;
+    cursor: pointer;
+  }
 }
 #post-secondary {
   display: flex;
   justify-content: center;
   height: 40rem;
   width: 40rem;
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 1rem;
   background-color: black;
 }
 
+#form-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 30rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
 #form-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
 }
