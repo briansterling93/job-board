@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../config/database.js");
 const Job = require("../models/Job.js");
 
-//get all jobs list
+//get a list of all the current jobs
 router.get("/", async (req, res) => {
   try {
     const findAll = await Job.findAll();
@@ -13,18 +13,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-//add a job
-router.get("/add", async (req, res) => {
+//add a new job (ui input based)
+router.post("/add", async (req, res) => {
   try {
-    let data = {
-      title: "Node Developer",
-      tech_stack: "Node, Express, SQL",
-      salary: "$95000",
-      descrip: "Node Developer with 3+ years experience",
-      contact: "johnnyjing23@hotmail.com"
-    };
-
-    const { title, tech_stack, salary, descrip, contact } = data;
+    let { title, tech_stack, salary, descrip, contact } = req.body;
 
     await Job.create({
       title: title,
