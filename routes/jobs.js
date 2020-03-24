@@ -18,15 +18,42 @@ router.post("/add", async (req, res) => {
   try {
     let { title, tech_stack, salary, descrip, contact } = req.body;
 
-    await Job.create({
-      title: title,
-      tech_stack: tech_stack,
-      salary: salary,
-      descrip: descrip,
-      contact: contact
-    });
+    const errors = [];
 
-    res.redirect("/jobs");
+    if (!title) {
+      errors.push({ error: "Please add a Job title" });
+      // res.send({ error: "Please add a Job title" });
+    }
+    if (!tech_stack) {
+      errors.push({ error: "Please add the required technical skills" });
+      // res.send({ error: "Please add the required technical skills" });
+    }
+    if (!salary) {
+      errors.push({ error: "Please add the job's salary" });
+      // res.send({ error: "Please add the job's salary" });
+    }
+    if (!descrip) {
+      errors.push({ error: "Please add a Job Description" });
+      // res.send({ error: "Please add a Job Description" });
+    }
+    if (!contact) {
+      errors.push({ error: "Please add Contact Info for this position" });
+      // res.send({ error: "Please add Contact Info for this position" });
+    }
+
+    if (errors.length > 0) {
+      res.send({ error: "Invalid Entry" });
+    } else {
+      await Job.create({
+        title: title,
+        tech_stack: tech_stack,
+        salary: salary,
+        descrip: descrip,
+        contact: contact
+      });
+
+      res.redirect("/jobs");
+    }
   } catch (error) {
     console.log(error);
   }

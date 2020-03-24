@@ -10,19 +10,69 @@ const AddJob = () => {
     contact: ""
   });
 
+  const [titleError, setTitleError] = useState("");
+  const [techError, setTechError] = useState("");
+  const [salaryError, setSalaryError] = useState("");
+  const [descripError, setDescripError] = useState("");
+  const [contactError, setContactError] = useState("");
+
   const { title, tech_stack, salary, descrip, contact } = formData;
-  //form ui input
+  //General UI Input Function
   const onChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //post new job to the backend/database
+  //POST new job to backend/sql database
   const onSubmit = async e => {
     e.preventDefault();
 
     const newJob = { title, tech_stack, salary, descrip, contact };
 
     try {
+      //Error Handling Wrap (below)
+      if (!title) {
+        setTitleError("Job title is required");
+      }
+
+      if (title) {
+        setTitleError("");
+      }
+
+      if (!tech_stack) {
+        setTechError("The required technologies are required");
+      }
+
+      if (tech_stack) {
+        setTechError("");
+      }
+
+      if (!salary) {
+        setSalaryError("Please enter the annual salary for this postion");
+      }
+
+      if (salary) {
+        setSalaryError("");
+      }
+
+      if (!descrip) {
+        setDescripError("Job description is required");
+      }
+
+      if (descrip) {
+        setDescripError("");
+      }
+
+      if (!contact) {
+        //add functionality to verify that it has the '@' symbol the UI entered email
+        setContactError("Please enter a valid email address");
+      }
+
+      if (contact) {
+        setContactError("");
+      }
+
+      //Error Handling Wrap (above)
+
       const config = {
         headers: {
           "Content-Type": "application/json"
@@ -52,6 +102,7 @@ const AddJob = () => {
                 name="title"
                 placeholder="Job Title"
               />
+              <div id="error-div">{titleError}</div>
             </div>
             <div className="form-input">
               <h2>Technologies Required</h2>
@@ -61,6 +112,7 @@ const AddJob = () => {
                 name="tech_stack"
                 placeholder="Python, C#, Java, React, etc.."
               />
+              <div id="error-div">{techError}</div>
             </div>
             <div className="form-input">
               <h2>Salary</h2>
@@ -70,6 +122,7 @@ const AddJob = () => {
                 name="salary"
                 placeholder="Annual Salary"
               />
+              <div id="error-div">{salaryError}</div>
             </div>
             <div className="form-input">
               <h2>Job Description</h2>
@@ -79,6 +132,7 @@ const AddJob = () => {
                 name="descrip"
                 placeholder="Job Description"
               />
+              <div id="error-div">{descripError}</div>
             </div>
             <div className="form-input">
               <h2>Contact Email</h2>
@@ -88,6 +142,7 @@ const AddJob = () => {
                 name="contact"
                 placeholder="Contact Email Address"
               />
+              <div id="error-div">{contactError}</div>
             </div>
             <div className="form-input">
               <button onClick={onSubmit}>Post Job</button>

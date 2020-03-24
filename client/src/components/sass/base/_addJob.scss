@@ -36,7 +36,7 @@
 #post-secondary {
   display: flex;
   justify-content: center;
-  height: 40rem;
+  height: 41rem;
   width: 40rem;
   opacity: 0.8;
   border-radius: 1rem;
@@ -73,4 +73,10 @@
   justify-content: center;
   align-items: center;
   padding: 0.9rem;
+}
+
+#error-div {
+  font-size: 1.2rem;
+  color: #ff3030;
+  font-weight: 700;
 }
