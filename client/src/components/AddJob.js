@@ -74,6 +74,7 @@ const AddJob = () => {
 
       //Error Handling Wrap (above)
 
+      //success & update backend (below)
       const config = {
         headers: {
           "Content-Type": "application/json"
@@ -129,7 +130,7 @@ const AddJob = () => {
               <h2>Job Description</h2>
 
               <textarea
-                rows="4"
+                rows="3"
                 cols="50"
                 value={descrip}
                 onChange={e => onChange(e)}

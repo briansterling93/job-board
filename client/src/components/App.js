@@ -5,15 +5,21 @@ import AllJobs from "./AllJobs";
 import AddJob from "./AddJob";
 import Navbar from "./Navbar";
 
+//Context
+import PopulateContextProvider from "../contexts/PopulateContext.js";
+
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Fragment>
         <Route exact path="/" component={Home} />
+
         <Switch>
-          <Route exact path="/jobs" component={AllJobs} />
-          <Route exact path="/jobs/add" component={AddJob} />
+          <PopulateContextProvider>
+            <Route exact path="/jobs" component={AllJobs} />
+            <Route exact path="/jobs/add" component={AddJob} />
+          </PopulateContextProvider>
         </Switch>
       </Fragment>
     </Router>
