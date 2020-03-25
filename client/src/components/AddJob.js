@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import PopulateContextProvider, {
+  PopulateContext
+} from "../contexts/PopulateContext.js";
+
 const AddJob = () => {
+  const {
+    setJobTitle,
+    setJobDescrip,
+    setJobSalary,
+    setJobTechStack
+  } = useContext(PopulateContext);
   const [formData, setFormData] = useState({
     title: "",
     tech_stack: "",

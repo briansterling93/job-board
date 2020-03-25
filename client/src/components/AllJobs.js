@@ -5,7 +5,9 @@ import axios from "axios";
 import { PopulateContext } from "../contexts/PopulateContext";
 
 const AllJobs = () => {
-  const { jobTitle } = useContext(PopulateContext);
+  const { jobTitle, jobDescrip, jobSalary, jobTechStack } = useContext(
+    PopulateContext
+  ); //contexts
 
   //populate all jobs function (below)
   const populateAll = async () => {
@@ -28,6 +30,7 @@ const AllJobs = () => {
     <div id="all-main">
       <div id="all-secondary">
         <div>{jobTitle}</div>
+        <div>{jobDescrip}</div>
         <div>...</div>
         <div>
           <button onClick={populateAll}>Click me</button>
