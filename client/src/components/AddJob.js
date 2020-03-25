@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const AddJob = () => {
@@ -126,12 +127,15 @@ const AddJob = () => {
             </div>
             <div className="form-input">
               <h2>Job Description</h2>
-              <input
+
+              <textarea
+                rows="4"
+                cols="50"
                 value={descrip}
                 onChange={e => onChange(e)}
                 name="descrip"
-                placeholder="Job Description"
-              />
+                placeholder="Describe The Details Of This Position"
+              ></textarea>
               <div id="error-div">{descripError}</div>
             </div>
             <div className="form-input">

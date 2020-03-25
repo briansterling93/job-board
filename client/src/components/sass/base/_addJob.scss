@@ -18,26 +18,40 @@
 
   input {
     font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+  }
+
+  textarea {
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
   }
 
   button {
     height: 2rem;
     width: 10rem;
     font-size: 1.3rem;
-    background-color: black;
+    background-color: #004dd1;
     color: white;
     border-radius: 2rem;
     font-weight: 700;
     outline: none;
-    border: 0.5px solid white;
+    border: 0.5px solid black;
     cursor: pointer;
   }
 }
 #post-secondary {
   display: flex;
   justify-content: center;
-  height: 41rem;
-  width: 40rem;
+  height: 43rem;
+  width: 34rem;
   opacity: 0.8;
   border-radius: 1rem;
   background-color: black;

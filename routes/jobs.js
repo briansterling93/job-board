@@ -22,23 +22,24 @@ router.post("/add", async (req, res) => {
 
     if (!title) {
       errors.push({ error: "Please add a Job title" });
-      // res.send({ error: "Please add a Job title" });
     }
     if (!tech_stack) {
       errors.push({ error: "Please add the required technical skills" });
-      // res.send({ error: "Please add the required technical skills" });
+    } else {
+      tech_stack = tech_stack.replace(/, /g, ",");
     }
     if (!salary) {
       errors.push({ error: "Please add the job's salary" });
-      // res.send({ error: "Please add the job's salary" });
+    } else {
+      salary = `$${salary}`;
     }
     if (!descrip) {
       errors.push({ error: "Please add a Job Description" });
-      // res.send({ error: "Please add a Job Description" });
+    } else {
+      descrip = descrip.replace(/\s+/g, " ").trim();
     }
     if (!contact) {
       errors.push({ error: "Please add Contact Info for this position" });
-      // res.send({ error: "Please add Contact Info for this position" });
     }
 
     if (errors.length > 0) {
