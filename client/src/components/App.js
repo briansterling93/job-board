@@ -1,28 +1,29 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useReducer } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import StateContext, {
+  initialState,
+  reducer,
+} from "../contexts/StateContext.js";
 import Home from "./Home";
 import AllJobs from "./AllJobs";
 import AddJob from "./AddJob";
 import Navbar from "./Navbar";
 
-//Context
-import PopulateContextProvider from "../contexts/PopulateContext.js";
-
 const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <Router>
-      <Navbar />
-      <Fragment>
-        <Route exact path="/" component={Home} />
-
-        <Switch>
-          <PopulateContextProvider>
+    <StateContext.Provider value={{ state, dispatch }}>
+      <Router>
+        <Navbar />
+        <Fragment>
+          <Route exact path="/" component={Home} />
+          <Switch>
             <Route exact path="/jobs" component={AllJobs} />
             <Route exact path="/jobs/add" component={AddJob} />
-          </PopulateContextProvider>
-        </Switch>
-      </Fragment>
-    </Router>
+          </Switch>
+        </Fragment>
+      </Router>
+    </StateContext.Provider>
   );
 };
 

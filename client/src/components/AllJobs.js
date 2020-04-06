@@ -1,21 +1,17 @@
 import React, { useState, useContext } from "react";
+import { StateContext } from "../contexts/StateContext.js";
 import axios from "axios";
 
-//context
-import { PopulateContext } from "../contexts/PopulateContext";
-
 const AllJobs = () => {
-  const { jobTitle, jobDescrip, jobSalary, jobTechStack } = useContext(
-    PopulateContext
-  ); //contexts
+  const { state, dispatch } = useContext(StateContext);
 
   //populate all jobs function (below)
   const populateAll = async () => {
     try {
       const config = {
         headers: {
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       };
 
       const res = await axios.get("/jobs");
@@ -29,11 +25,15 @@ const AllJobs = () => {
   return (
     <div id="all-main">
       <div id="all-secondary">
-        <div>{jobTitle}</div>
-        <div>{jobDescrip}</div>
-        <div>...</div>
         <div>
           <button onClick={populateAll}>Click me</button>
+          <div>
+            <ul>
+              {state.jobsArray.map((i) => (
+                <li key={i.id}>{i.value}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
