@@ -17,7 +17,16 @@ const AllJobs = () => {
       const res = await axios.get("/jobs");
 
       JSON.stringify(res);
-      console.log(res.data.findAll);
+      const gg = res.data.findAll;
+
+      // console.log(gg[0]);
+      // console.log(res.data.findAll);
+
+      await dispatch({
+        // update job board
+        type: "UPDATE_ARRAY",
+        payload: gg[0],
+      });
     } catch (error) {
       console.log(error);
     }
@@ -27,13 +36,20 @@ const AllJobs = () => {
       <div id="all-secondary">
         <div>
           <button onClick={populateAll}>Click me</button>
-          <div>
+          {/* <div>
             <ul>
               {state.jobsArray.map((i) => (
                 <li key={i.id}>{i.value}</li>
               ))}
             </ul>
-          </div>
+          </div> */}
+        </div>
+        <div>
+          <ul>
+            {state.jobsArray.map((i) => (
+              <li key={i.id}>{i.value}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
