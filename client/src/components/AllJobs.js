@@ -27,7 +27,7 @@ const AllJobs = () => {
             <ul>
               {allJobs.map((i) => (
                 <li key={i.id}>
-                  <div>
+                  <div id="job-post">
                     {i.title} , {i.salary} , {i.tech_stack} ,
                   </div>
                 </li>
