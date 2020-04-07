@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import e from "express";
 
 export const StateContext = createContext();
 
@@ -8,7 +9,7 @@ export const initialState = {
   salary: "",
   descrip: "",
   contact: "",
-  jobsArray: [],
+  jobsArray: "",
 };
 
 export const appActions = {
@@ -32,12 +33,19 @@ export const appActions = {
     return { ...state, contact: actions.payload };
   },
 
+  // UPDATE_ARRAY: (state, actions) => {
+  //   return {
+  //     jobsArray: [
+  //       ...state.jobsArray,
+  //       { id: state.jobsArray.length, value: actions.payload },
+  //     ],
+  //   };
+  // },
+
   UPDATE_ARRAY: (state, actions) => {
     return {
-      jobsArray: [
-        ...state.jobsArray,
-        { id: state.jobsArray.length, value: actions.payload },
-      ],
+      ...state,
+      jobsArray: actions.payload,
     };
   },
 
