@@ -15,11 +15,6 @@ const AddJob = () => {
   const [contactError, setContactError] = useState("");
   // error handling wrap (state)
 
-  //General UI Input Function
-  const onChange = (e) => {
-    console.log("hello");
-  };
-
   //POST new job to backend/sql database
   const onSubmit = async (e) => {
     e.preventDefault();
