@@ -76,6 +76,36 @@ const AddJob = () => {
 
       const res = await axios.post("/jobs/add", body, config);
 
+      //TEST TO RENDER UPDATED JOBS FROM ADDJOBS COMPONENT (BELOW)
+      // const res2 = await axios.get("/jobs");
+
+      // JSON.stringify(res);
+      // const allJobs = res2.data.findAll;
+      // console.log(allJobs);
+
+      // dispatch({
+      //   type: "UPDATE_ARRAY",
+      //   payload: (
+      //     <div>
+      //       <ul>
+      //         {allJobs.map((i) => (
+      //           <li key={i.id}>
+      //             <div id="test2">
+      //               <div id="test1">
+      //                 <div>Job Title: {i.title}</div>
+      //                 <div>Tech Stack: {i.tech_stack}</div>
+      //                 <div>Salary: {i.salary}</div>
+      //                 <div>Contact: {i.contact}</div>
+      //               </div>
+      //             </div>
+      //           </li>
+      //         ))}
+      //       </ul>
+      //     </div>
+      //   ),
+      // });
+      //TEST TO RENDER UPDATED JOBS FROM ADDJOBS COMPONENT (ABOVE)
+
       // reset values
       if ((title, tech_stack, salary, descrip, contact)) {
         dispatch({

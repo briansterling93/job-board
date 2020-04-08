@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StateContext } from "../contexts/StateContext.js";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { state, dispatch, jobsArray } = useContext(StateContext);
+
   return (
     <div id="navbar-main">
       <div id="navbar-div">
