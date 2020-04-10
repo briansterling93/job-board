@@ -3,7 +3,7 @@ import { StateContext } from "../contexts/StateContext.js";
 import axios from "axios";
 
 const AllJobs = () => {
-  const { state, dispatch, jobsArray } = useContext(StateContext);
+  const { state, dispatch } = useContext(StateContext);
 
   // useEffect(() => {
   //   populateAll();
@@ -18,14 +18,14 @@ const AllJobs = () => {
         },
       };
 
-      const res = await axios.get("/jobs");
+      let res = await axios.get("/jobs");
 
       JSON.stringify(res);
-      const allJobs = res.data.findAll;
+      const allJobs = await res.data.findAll;
 
       console.log(allJobs);
 
-      dispatch({
+      const y = await dispatch({
         type: "UPDATE_ARRAY",
         payload: (
           <div>
@@ -56,13 +56,12 @@ const AllJobs = () => {
         <div>
           <button onClick={populateAll}>Click me</button>
         </div>
-        <div>
-          <ul>
-            {state.jobsArray.map((i) => (
-              <li key={i.id}>{i.value}</li>
-            ))}
-          </ul>
-        </div>
+
+        <ul>
+          {state.jobsArray.map((i) => (
+            <li key={i.id}>{i.value}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

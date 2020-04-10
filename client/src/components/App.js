@@ -15,9 +15,10 @@ const App = () => {
     <StateContext.Provider value={{ state, dispatch }}>
       <Router>
         <Navbar />
+
         <Fragment>
-          <Route exact path="/" component={Home} />
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route exact path="/jobs" component={AllJobs} />
             <Route exact path="/jobs/add" component={AddJob} />
           </Switch>
