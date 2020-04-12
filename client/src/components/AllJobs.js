@@ -6,6 +6,10 @@ const AllJobs = () => {
   const { state, dispatch } = useContext(StateContext);
   const [jobBoard, setJobBoard] = useState([]);
 
+  useEffect(() => {
+    populateAll();
+  }, []);
+
   // populate all jobs function (below)
   const populateAll = async () => {
     try {
@@ -29,6 +33,7 @@ const AllJobs = () => {
                   <div id="test1">
                     <div>Job Title: {i.title}</div>
                     <div>Tech Stack: {i.tech_stack}</div>
+                    <div>Description: {i.descrip}</div>
                     <div>Salary: {i.salary}</div>
                     <div>Contact: {i.contact}</div>
                   </div>
@@ -45,7 +50,6 @@ const AllJobs = () => {
   return (
     <div id="all-main">
       <div id="all-secondary">
-        <button onClick={populateAll}>Click it</button>
         <div>{jobBoard}</div>
       </div>
     </div>

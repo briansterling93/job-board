@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const StateContext = createContext();
 
@@ -8,7 +8,6 @@ export const initialState = {
   salary: "",
   descrip: "",
   contact: "",
-  jobsArray: [],
 };
 
 export const appActions = {
