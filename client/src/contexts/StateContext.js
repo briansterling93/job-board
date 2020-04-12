@@ -32,15 +32,6 @@ export const appActions = {
     return { ...state, contact: actions.payload };
   },
 
-  UPDATE_ARRAY: (state, actions) => {
-    return {
-      jobsArray: [
-        ...state.jobsArray,
-        { id: state.jobsArray.length, value: actions.payload },
-      ],
-    };
-  },
-
   CLEAR_FORM: (state, actions) => {
     return { title: "", tech_stack: "", salary: "", descrip: "", contact: "" };
   },

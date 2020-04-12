@@ -1,13 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { StateContext } from "../contexts/StateContext.js";
 import axios from "axios";
 
 const AllJobs = () => {
   const { state, dispatch } = useContext(StateContext);
-
-  // useEffect(() => {
-  //   populateAll();
-  // }, []);
+  const [jobBoard, setJobBoard] = useState([]);
 
   // populate all jobs function (below)
   const populateAll = async () => {
@@ -23,29 +20,24 @@ const AllJobs = () => {
       JSON.stringify(res);
       const allJobs = await res.data.findAll;
 
-      console.log(allJobs);
-
-      const y = await dispatch({
-        type: "UPDATE_ARRAY",
-        payload: (
-          <div>
-            <ul>
-              {allJobs.map((i) => (
-                <li key={i.id}>
-                  <div id="test2">
-                    <div id="test1">
-                      <div>Job Title: {i.title}</div>
-                      <div>Tech Stack: {i.tech_stack}</div>
-                      <div>Salary: {i.salary}</div>
-                      <div>Contact: {i.contact}</div>
-                    </div>
+      setJobBoard(
+        <div>
+          <ul>
+            {allJobs.map((i) => (
+              <li key={i.id}>
+                <div id="test2">
+                  <div id="test1">
+                    <div>Job Title: {i.title}</div>
+                    <div>Tech Stack: {i.tech_stack}</div>
+                    <div>Salary: {i.salary}</div>
+                    <div>Contact: {i.contact}</div>
                   </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ),
-      });
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
     } catch (error) {
       console.log(error);
     }
@@ -53,15 +45,8 @@ const AllJobs = () => {
   return (
     <div id="all-main">
       <div id="all-secondary">
-        <div>
-          <button onClick={populateAll}>Click me</button>
-        </div>
-
-        <ul>
-          {state.jobsArray.map((i) => (
-            <li key={i.id}>{i.value}</li>
-          ))}
-        </ul>
+        <button onClick={populateAll}>Click it</button>
+        <div>{jobBoard}</div>
       </div>
     </div>
   );

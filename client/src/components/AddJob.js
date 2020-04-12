@@ -75,13 +75,7 @@ const AddJob = () => {
       const body = JSON.stringify(newJob);
 
       const res = await axios.post("/jobs/add", body, config);
-
-      //test
-      // await dispatch({
-      //   type: "UPDATE_ARRAY",
-      //   payload: [{ ...state.jobsArray, newJob }],
-      // });
-      //test
+      console.log(res);
 
       // reset values
       if ((title, tech_stack, salary, descrip, contact)) {
@@ -104,7 +98,7 @@ const AddJob = () => {
             <div className="form-input">
               <h2>Job Title</h2>
               <input
-                value={title}
+                value={state.title}
                 onChange={(e) =>
                   dispatch({ type: "UPDATE_TITLE", payload: e.target.value })
                 }
@@ -115,7 +109,7 @@ const AddJob = () => {
             <div className="form-input">
               <h2>Technologies Required</h2>
               <input
-                value={tech_stack}
+                value={state.tech_stack}
                 onChange={(e) =>
                   dispatch({ type: "UPDATE_TECH", payload: e.target.value })
                 }
@@ -126,7 +120,7 @@ const AddJob = () => {
             <div className="form-input">
               <h2>Salary</h2>
               <input
-                value={salary}
+                value={state.salary}
                 onChange={(e) =>
                   dispatch({ type: "UPDATE_SALARY", payload: e.target.value })
                 }
@@ -140,7 +134,7 @@ const AddJob = () => {
               <textarea
                 rows="3"
                 cols="50"
-                value={descrip}
+                value={state.descrip}
                 onChange={(e) =>
                   dispatch({
                     type: "UPDATE_DESCRIPTION",
@@ -154,7 +148,7 @@ const AddJob = () => {
             <div className="form-input">
               <h2>Contact Email</h2>
               <input
-                value={contact}
+                value={state.contact}
                 onChange={(e) =>
                   dispatch({ type: "UPDATE_CONTACT", payload: e.target.value })
                 }
