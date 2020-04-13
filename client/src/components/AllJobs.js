@@ -31,11 +31,27 @@ const AllJobs = () => {
               <li key={i.id}>
                 <div id="test2">
                   <div id="test1">
-                    <div>Job Title: {i.title}</div>
-                    <div>Tech Stack: {i.tech_stack}</div>
-                    <div>Description: {i.descrip}</div>
-                    <div>Salary: {i.salary}</div>
-                    <div>Contact: {i.contact}</div>
+                    <div>
+                      <h1>{i.title}</h1>
+                    </div>
+                    <div id="job-details">
+                      <div className="job-detail">
+                        <span className="job-detail-title">Tech Stack:</span>{" "}
+                        {i.tech_stack}
+                      </div>
+                      <div className="job-detail">
+                        <span className="job-detail-title">Description:</span>{" "}
+                        {i.descrip}
+                      </div>
+                      <div className="job-detail">
+                        <span className="job-detail-title">Salary:</span>{" "}
+                        {i.salary}
+                      </div>
+                      <div className="job-detail">
+                        <span className="job-detail-title">Contact:</span>{" "}
+                        {i.contact}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>

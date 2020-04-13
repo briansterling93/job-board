@@ -5,7 +5,8 @@
   justify-content: center;
   color: $off-white;
   align-items: center;
-
+  overflow-y: scroll;
+  margin: block;
   background-image: linear-gradient(
       to right bottom,
       rgba(25, 26, 25, 0.8),
@@ -13,34 +14,56 @@
       rgba(64, 64, 64, 0.8)
     ),
     url("https://p0.piqsels.com/preview/59/373/316/person-typing-on-laptop-computer.jpg");
-  // https://p0.piqsels.com/preview/59/373/316/person-typing-on-laptop-computer.jpg
-  // https://miro.medium.com/max/2800/0*SJUI8Ntvn6D6WMDu.jpg
   background-size: cover;
 }
 
 #all-secondary {
+  height: 95vh;
   display: flex;
-  padding-bottom: 1rem;
   align-items: center;
   flex-direction: column;
-  overflow: auto;
-  color: green;
-  height: 35rem;
-  width: 60rem;
-  border-radius: 10%;
-  opacity: 0.8;
-  background-color: black;
+  color: black;
+  font-weight: 500;
 
+  h1 {
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-align: center;
+    // text-decoration: underline;
+  }
   ul {
     list-style-type: none;
   }
 }
 
 #test1 {
-  background-color: white;
-  // height: 3rem;
+  // background-color: #e1e1e1;
+  background-color: black;
+  color: white;
+  height: 12rem;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  // opacity: 0.8;
+  width: 35rem;
+  overflow-y: auto;
+  border-radius: 1rem;
 }
 
 #test2 {
   padding: 1rem;
+}
+
+.job-detail {
+  padding: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.job-detail-title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #4f37eb;
+}
+
+#job-details {
+  padding-top: 1rem;
 }
