@@ -17,6 +17,12 @@
   background-size: cover;
 }
 
+#page-title {
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+  color: #2d84c6;
+}
+
 #all-secondary {
   height: 95vh;
   display: flex;
@@ -24,16 +30,32 @@
   flex-direction: column;
   color: black;
   font-weight: 500;
+  font-family: sans-serif;
 
-  h1 {
-    font-weight: 500;
-    font-size: 1.7rem;
-    text-align: center;
-    // text-decoration: underline;
-  }
+  // h1 {
+  //   font-weight: 550;
+  //   // font-size: 1.6rem;
+  //   text-align: center;
+  //   // text-decoration: underline;
+  //   :hover {
+  //     text-decoration: underline;
+  //   }
+  // }
   ul {
     list-style-type: none;
   }
+
+  ol {
+    list-style-type: circle;
+    padding-left: 1rem;
+  }
+}
+
+.job-title {
+  font-weight: 550;
+  font-size: 1.5rem;
+  text-align: center;
+  // text-decoration: underline;
 }
 
 #test1 {
@@ -41,29 +63,41 @@
   background-color: black;
   color: white;
   height: 12rem;
-  border-radius: 0.2rem;
   padding: 0.4rem;
-  // opacity: 0.8;
-  width: 35rem;
+  opacity: 0.7;
+  width: 38rem;
   overflow-y: auto;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
+  border-bottom: 1px solid white;
 }
 
 #test2 {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .job-detail {
-  padding: 0.2rem;
+  padding: 0.4rem;
   font-size: 1.1rem;
 }
 
 .job-detail-title {
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: #4f37eb;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #ababab;
+  letter-spacing: 0.1rem;
 }
 
 #job-details {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#job-detail-salary {
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+#btn-div {
+  justify-content: center;
 }

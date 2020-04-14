@@ -9,7 +9,11 @@ const Home = () => {
           Search for a job, get hired, and work as a completely remote developer
         </div>
         <div id="home-search">
-          <input placeholder="Node, React, Java, etc.." />
+          <input
+            type="search"
+            results="0"
+            placeholder="Node, React, Java, etc.."
+          />
         </div>
         <div id="home-btn">
           <button>Search</button>
