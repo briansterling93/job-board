@@ -8,6 +8,7 @@ export const initialState = {
   salary: "",
   descrip: "",
   contact: "",
+  searchQuery: "",
 };
 
 export const appActions = {
@@ -29,6 +30,10 @@ export const appActions = {
 
   UPDATE_CONTACT: (state, actions) => {
     return { ...state, contact: actions.payload };
+  },
+
+  SEARCH_QUERY: (state, actions) => {
+    return { ...state, searchQuery: actions.payload };
   },
 
   CLEAR_FORM: (state, actions) => {
