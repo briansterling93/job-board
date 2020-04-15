@@ -27,7 +27,7 @@ const AllJobs = () => {
       setJobBoard(
         <div>
           <ul>
-            {allJobs.map((i) => (
+            {allJobs.reverse().map((i) => (
               <li key={i.id}>
                 <div id="test2">
                   <div id="test1">
@@ -60,6 +60,16 @@ const AllJobs = () => {
                           <li>
                             <span className="job-detail-title">Contact:</span>{" "}
                             {i.contact}
+                          </li>
+                        </ol>
+                      </div>
+                      <div className="job-detail">
+                        <ol>
+                          <li>
+                            <span className="job-detail-title">
+                              Date Posted:
+                            </span>{" "}
+                            {i.createdAt}
                           </li>
                         </ol>
                       </div>

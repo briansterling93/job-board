@@ -17,13 +17,18 @@ const Home = () => {
       JSON.stringify(res);
       const allJobs = await res.data.findAll;
 
-      const allTechs = await allJobs.map((i) => i.tech_stack); //database query to populate all entered tech_stacks in sql database
+      const allTechs = await allJobs.map((i) =>
+        i.tech_stack.toLowerCase().split(",").join(",")
+      ); //database query to populate all entered tech_stacks in sql database
 
-      if (state.searchQuery == allTechs) {
+      if (allTechs.includes(state.searchQuery)) {
         //function to determine if search query matches any tech_stacks in the sql database job board
-        console.log("hello");
+        console.log("Included");
+      } else {
+        console.log("Not Included");
       }
 
+      console.log(state.searchQuery);
       console.log(allTechs);
     } catch (error) {
       console.error(error);

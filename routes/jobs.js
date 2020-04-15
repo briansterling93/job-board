@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 //add a new job (ui input based)
 router.post("/add", async (req, res) => {
   try {
-    let { title, tech_stack, salary, descrip, contact } = req.body;
+    let { title, tech_stack, salary, descrip, contact, createdAt } = req.body;
 
     const errors = [];
 
@@ -50,7 +50,8 @@ router.post("/add", async (req, res) => {
         tech_stack: tech_stack,
         salary: salary,
         descrip: descrip,
-        contact: contact
+        contact: contact,
+        createdAt: createdAt,
       });
 
       res.redirect("/jobs");

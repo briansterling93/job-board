@@ -33,7 +33,7 @@ export const appActions = {
   },
 
   SEARCH_QUERY: (state, actions) => {
-    return { ...state, searchQuery: actions.payload };
+    return { ...state, searchQuery: actions.payload.toLowerCase() };
   },
 
   CLEAR_FORM: (state, actions) => {
