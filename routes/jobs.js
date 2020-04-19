@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const db = require("../config/database.js");
 const Job = require("../models/Job.js");
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 //get a list of all the current jobs
 router.get("/", async (req, res) => {
@@ -56,6 +58,23 @@ router.post("/add", async (req, res) => {
 
       res.redirect("/jobs");
     }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//ui search inquiry
+router.get("/test", async (req, res) => {
+  try {
+    let { uiSearch } = req.body;
+
+    const findEm = await Job.findAll({
+      where: {
+        tech_stack: { [Op.like]: `%${uiSearch}%` },
+      },
+    });
+
+    res.json({ findEm });
   } catch (error) {
     console.log(error);
   }

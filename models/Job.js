@@ -3,20 +3,23 @@ const db = require("../config/database.js");
 
 const Job = db.define("jobs", {
   title: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   tech_stack: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   salary: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   descrip: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   contact: {
-    type: Sequelize.STRING
-  }
+    type: Sequelize.STRING,
+  },
+  uiSearch: {
+    type: Sequelize.STRING,
+  },
 });
 
 module.exports = Job;

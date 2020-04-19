@@ -12,26 +12,13 @@ const Home = () => {
         },
       };
 
-      let res = await axios.get("/jobs");
+      let res = await axios.get("/jobs/test");
 
-      JSON.stringify(res);
-      const allJobs = await res.data.findAll;
-
-      const allTechs = await allJobs.map((i) =>
-        i.tech_stack.toLowerCase().split(",").join(",")
-      ); //database query to populate all entered tech_stacks in sql database
-
-      if (allTechs.includes(state.searchQuery)) {
-        //function to determine if search query matches any tech_stacks in the sql database job board
-        console.log("Included");
-      } else {
-        console.log("Not Included");
-      }
-
-      console.log(state.searchQuery);
-      console.log(allTechs);
+      const searchQuery = res.data.findEm;
+      JSON.stringify(searchQuery);
+      console.log(searchQuery);
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   };
   return (
@@ -43,13 +30,7 @@ const Home = () => {
         </div>
         <div id="home-query">
           <div id="home-search">
-            <input
-              value={state.searchQuery}
-              onChange={(e) =>
-                dispatch({ type: "SEARCH_QUERY", payload: e.target.value })
-              }
-              placeholder="Node, React, Java, etc.."
-            />
+            <input placeholder="Node, React, Java, etc.." />
             <div id="btn-div">
               <button onClick={handleQuery} id="home-btn">
                 Search

@@ -32,9 +32,9 @@ export const appActions = {
     return { ...state, contact: actions.payload };
   },
 
-  SEARCH_QUERY: (state, actions) => {
-    return { ...state, searchQuery: actions.payload.toLowerCase() };
-  },
+  // SEARCH_QUERY: (state, actions) => {
+  //   return { ...state, searchQuery: actions.payload.toLowerCase() };
+  // },
 
   CLEAR_FORM: (state, actions) => {
     return { title: "", tech_stack: "", salary: "", descrip: "", contact: "" };
