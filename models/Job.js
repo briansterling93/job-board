@@ -17,9 +17,9 @@ const Job = db.define("jobs", {
   contact: {
     type: Sequelize.STRING,
   },
-  uiSearch: {
-    type: Sequelize.STRING,
-  },
+  // uiSearch: {
+  //   type: Sequelize.STRING,
+  // },
 });
 
 module.exports = Job;

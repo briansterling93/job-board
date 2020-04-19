@@ -63,18 +63,28 @@ router.post("/add", async (req, res) => {
   }
 });
 
-//ui search inquiry
-router.get("/test", async (req, res) => {
+// handle ui search query
+router.get("/test/", async (req, res) => {
   try {
-    let { uiSearch } = req.body;
+    let errors = [];
 
-    const findEm = await Job.findAll({
-      where: {
-        tech_stack: { [Op.like]: `%${uiSearch}%` },
-      },
-    });
+    let { userQuery } = req.body;
 
-    res.json({ findEm });
+    if (!userQuery) {
+      errors.push({ error: "Valid job search is required" });
+    }
+
+    if (errors.length > 0) {
+      res.send({ errors });
+    } else {
+      const findEm = await Job.findAll({
+        where: {
+          tech_stack: { [Op.like]: `%${userQuery}%` },
+        },
+      });
+
+      res.json({ findEm });
+    }
   } catch (error) {
     console.log(error);
   }
