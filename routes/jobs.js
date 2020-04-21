@@ -64,27 +64,43 @@ router.post("/add", async (req, res) => {
 });
 
 // handle ui search query
-router.get("/test/", async (req, res) => {
+// router.get("/test/", async (req, res) => {
+//   try {
+//     let errors = [];
+
+//     let { userQuery } = req.body;
+
+//     // if (!userQuery) {
+//     //   errors.push({ error: "Valid job search is required" });
+//     // }
+
+//     if (errors.length > 0) {
+//       res.send({ errors });
+//     } else {
+//       const findEm = await Job.findAll({
+//         where: {
+//           tech_stack: { [Op.like]: `%${userQuery}%` },
+//         },
+//       });
+
+//       res.json({ findEm });
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
+
+router.get("/test/:qItem", async (req, res) => {
   try {
-    let errors = [];
+    let { userQuery } = await req.body;
 
-    let { userQuery } = req.body;
+    const findEm = await Job.findAll({
+      where: {
+        tech_stack: { [Op.like]: `%${req.params.qItem}%` },
+      },
+    });
 
-    if (!userQuery) {
-      errors.push({ error: "Valid job search is required" });
-    }
-
-    if (errors.length > 0) {
-      res.send({ errors });
-    } else {
-      const findEm = await Job.findAll({
-        where: {
-          tech_stack: { [Op.like]: `%${userQuery}%` },
-        },
-      });
-
-      res.json({ findEm });
-    }
+    res.json({ findEm });
   } catch (error) {
     console.log(error);
   }

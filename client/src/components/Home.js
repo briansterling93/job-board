@@ -10,23 +10,12 @@ const Home = () => {
   const handleQuery = async () => {
     try {
       if (!userQuery) {
-        console.log("You must enter a job search");
-      } else {
-        const config = {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        };
-
-        const body = JSON.stringify(userQuery);
-
-        // const res = await axios.get(`jobs/test/`, body, config);
-
-        const res = await axios.get(`jobs/test/`, body, config);
-
-        // console.log(body);
-        console.log(res.data);
+        console.log("Please try another search");
       }
+
+      let res = await axios.get(`jobs/test/` + userQuery);
+
+      console.log(res.data);
     } catch (error) {
       console.log(error);
     }
