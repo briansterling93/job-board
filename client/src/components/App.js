@@ -7,6 +7,7 @@ import StateContext, {
 import Home from "./Home";
 import AllJobs from "./AllJobs";
 import AddJob from "./AddJob";
+import QueriedJob from "./QueriedJob";
 import Navbar from "./Navbar";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/jobs" component={AllJobs} />
             <Route exact path="/jobs/add" component={AddJob} />
+            <Route exact path="/jobs/queried" component={QueriedJob} />
           </Switch>
         </Fragment>
       </Router>

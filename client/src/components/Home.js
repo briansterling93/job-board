@@ -5,6 +5,7 @@ import axios from "axios";
 const Home = () => {
   const { state, dispatch } = useContext(StateContext);
   const [userQuery, setQuery] = useState("");
+  const [jobList, setJobList] = useState([]);
 
   //handle ui search func (below)
   const handleQuery = async () => {
@@ -13,9 +14,27 @@ const Home = () => {
         console.log("Please try another search");
       }
 
-      let res = await axios.get(`jobs/test/` + userQuery);
+      let res = await axios.get(`jobs/queried/` + userQuery);
 
-      console.log(res.data);
+      // console.log(res.data.findEm[0]);
+
+      setJobList(
+        res.data.findEm.map((e) => (
+          <div>
+            <ul key={e.id}>
+              <li>{e.title}</li>
+              <li>{e.salary}</li>
+              <li>{e.tech_stack}</li>
+              <li>{e.descrip}</li>3<li>{e.createdAt}</li>
+            </ul>
+          </div>
+        ))
+      );
+
+      // await dispatch({
+      //   type: "QUERIED_JOB", //render the searched jobs into a new component
+      //   payload: jobList,
+      // });
     } catch (error) {
       console.log(error);
     }
@@ -30,6 +49,7 @@ const Home = () => {
         <div id="home-query">
           <div id="home-search">
             <input
+              // maxLength="12"
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Node, React, Java, etc.."
             />
@@ -37,6 +57,8 @@ const Home = () => {
               <button onClick={handleQuery} id="home-btn">
                 Search
               </button>
+              {jobList}
+              {/* {state.queriedJob} */}
             </div>
           </div>
         </div>

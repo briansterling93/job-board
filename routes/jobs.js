@@ -5,7 +5,7 @@ const Job = require("../models/Job.js");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
-//get a list of all the current jobs
+//GET - view all jobs
 router.get("/", async (req, res) => {
   try {
     const findAll = await Job.findAll();
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//add a new job (ui input based)
+//POST - add a new job
 router.post("/add", async (req, res) => {
   try {
     let { title, tech_stack, salary, descrip, contact, createdAt } = req.body;
@@ -63,40 +63,16 @@ router.post("/add", async (req, res) => {
   }
 });
 
-// handle ui search query
-// router.get("/test/", async (req, res) => {
-//   try {
-//     let errors = [];
-
-//     let { userQuery } = req.body;
-
-//     // if (!userQuery) {
-//     //   errors.push({ error: "Valid job search is required" });
-//     // }
-
-//     if (errors.length > 0) {
-//       res.send({ errors });
-//     } else {
-//       const findEm = await Job.findAll({
-//         where: {
-//           tech_stack: { [Op.like]: `%${userQuery}%` },
-//         },
-//       });
-
-//       res.json({ findEm });
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
-
-router.get("/test/:qItem", async (req, res) => {
+//GET - ui query to search for a specific role
+router.get("/queried/:qItem", async (req, res) => {
   try {
     let { userQuery } = await req.body;
 
     const findEm = await Job.findAll({
       where: {
-        tech_stack: { [Op.like]: `%${req.params.qItem}%` },
+        tech_stack: {
+          [Op.like]: `%${req.params.qItem}%`,
+        },
       },
     });
 

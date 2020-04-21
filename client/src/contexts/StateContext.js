@@ -8,7 +8,7 @@ export const initialState = {
   salary: "",
   descrip: "",
   contact: "",
-  searchQuery: "",
+  queriedJob: [],
 };
 
 export const appActions = {
@@ -32,9 +32,9 @@ export const appActions = {
     return { ...state, contact: actions.payload };
   },
 
-  // SEARCH_QUERY: (state, actions) => {
-  //   return { ...state, searchQuery: actions.payload.toLowerCase() };
-  // },
+  QUERIED_JOB: (state, actions) => {
+    return { ...state, queriedJob: actions.payload };
+  },
 
   CLEAR_FORM: (state, actions) => {
     return { title: "", tech_stack: "", salary: "", descrip: "", contact: "" };
