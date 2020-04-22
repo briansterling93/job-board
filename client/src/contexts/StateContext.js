@@ -36,10 +36,6 @@ export const appActions = {
     return { ...state, queriedJob: actions.payload };
   },
 
-  // QUERY_JOB: (state, actions) => {
-  //   return [{ ...state, queriedJob: actions.payload }];
-  // },
-
   CLEAR_FORM: (state, actions) => {
     return { title: "", tech_stack: "", salary: "", descrip: "", contact: "" };
   },

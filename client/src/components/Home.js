@@ -21,51 +21,55 @@ const Home = () => {
       await dispatch({
         type: "QUERY_JOB",
         payload: findQuery.map((i) => (
-          <li key={i.length}>
-            <div id="test2">
-              <div id="test1">
-                <div>
-                  <h1 className="job-title">{i.title}</h1>
-                </div>
-                <div id="job-details">
-                  <div className="job-detail">
-                    {/* <span className="job-detail-title">Salary - </span>{" "} */}
-                    <span id="job-detail-salary">{i.salary}</span>
+          <ul>
+            <li key={i.length}>
+              <div id="test2">
+                <div id="test1">
+                  <div>
+                    <h1 className="job-title">{i.title}</h1>
                   </div>
-                  <div className="job-detail">
-                    <ol>
-                      <li>
-                        <span className="job-detail-title">Requirements:</span>{" "}
-                        {i.tech_stack}
-                      </li>
-                    </ol>
-                  </div>
-                  <div id="job-detail-description" className="job-detail">
-                    <ol>
-                      <li>{i.descrip}</li>
-                    </ol>
-                  </div>
+                  <div id="job-details">
+                    <div className="job-detail">
+                      {/* <span className="job-detail-title">Salary - </span>{" "} */}
+                      <span id="job-detail-salary">{i.salary}</span>
+                    </div>
+                    <div className="job-detail">
+                      <ol>
+                        <li>
+                          <span className="job-detail-title">
+                            Requirements:
+                          </span>{" "}
+                          {i.tech_stack}
+                        </li>
+                      </ol>
+                    </div>
+                    <div id="job-detail-description" className="job-detail">
+                      <ol>
+                        <li>{i.descrip}</li>
+                      </ol>
+                    </div>
 
-                  <div className="job-detail">
-                    <ol>
-                      <li>
-                        <span className="job-detail-title">Contact:</span>{" "}
-                        {i.contact}
-                      </li>
-                    </ol>
-                  </div>
-                  <div className="job-detail">
-                    <ol>
-                      <li>
-                        <span className="job-detail-title">Date Posted:</span>{" "}
-                        {i.createdAt}
-                      </li>
-                    </ol>
+                    <div className="job-detail">
+                      <ol>
+                        <li>
+                          <span className="job-detail-title">Contact:</span>{" "}
+                          {i.contact}
+                        </li>
+                      </ol>
+                    </div>
+                    <div className="job-detail">
+                      <ol>
+                        <li>
+                          <span className="job-detail-title">Date Posted:</span>{" "}
+                          {i.createdAt}
+                        </li>
+                      </ol>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
+          </ul>
         )),
       });
     } catch (error) {
