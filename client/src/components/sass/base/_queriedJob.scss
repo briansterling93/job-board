@@ -1,1 +1,28 @@
 //same UI as _allJobs.scss
+
+#query-error-div {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#query-error {
+  display: flex;
+  flex-direction: column;
+  height: 24rem;
+  //   width: 20rem;
+  //   color: #7d79ff;
+  color: #38a1eb;
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+#query-face {
+  font-size: 9rem;
+  color: white;
+  padding-bottom: 1rem;
+}
