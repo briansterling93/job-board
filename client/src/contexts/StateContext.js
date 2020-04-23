@@ -8,6 +8,7 @@ export const initialState = {
   salary: "",
   descrip: "",
   contact: "",
+  searchedJob: "hello",
   queriedJob: [],
 };
 
@@ -30,6 +31,10 @@ export const appActions = {
 
   UPDATE_CONTACT: (state, actions) => {
     return { ...state, contact: actions.payload };
+  },
+
+  SEARCH_JOB: (state, actions) => {
+    return { ...state, searchedJob: actions.payload };
   },
 
   QUERY_JOB: (state, actions) => {

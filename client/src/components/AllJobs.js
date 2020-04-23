@@ -36,7 +36,6 @@ const AllJobs = () => {
                     </div>
                     <div id="job-details">
                       <div className="job-detail">
-                        {/* <span className="job-detail-title">Salary - </span>{" "} */}
                         <span id="job-detail-salary">{i.salary}</span>
                       </div>
                       <div className="job-detail">
