@@ -1,5 +1,3 @@
-//same UI as _allJobs.scss
-
 #query-error-div {
   display: flex;
   height: 100vh;
@@ -13,11 +11,21 @@
   height: 24rem;
   //   width: 20rem;
   //   color: #7d79ff;
-  color: #38a1eb;
+  color: #efcf00;
 
   p {
     font-size: 1.3rem;
     font-weight: 600;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  a {
+    // color: #efcf00;
+    color: #7d79ff;
   }
 }
 

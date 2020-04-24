@@ -96,8 +96,8 @@ const Home = () => {
                 <div>
                   <p>
                     No current roles are available yet regarding your search,
-                    feel free to check back later or search for another
-                    technology
+                    feel free to check back later or{" "}
+                    <NavLink to="/">search for another technology</NavLink>
                   </p>
                 </div>
               </div>
@@ -120,6 +120,8 @@ const Home = () => {
         <div id="home-query">
           <div id="home-search">
             <input
+              type="text"
+              maxLength="15"
               onChange={handleSearch}
               placeholder="Enter a technology (React, Node, Etc..)"
             />
