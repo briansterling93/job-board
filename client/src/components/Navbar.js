@@ -1,16 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [showNav, setToggle] = useState("");
+
+  //nav bar toggle functionality
   const handle = () => {
-    document.getElementById("nav-ul").style.display = "none";
+    setToggle((document.getElementById("nav-ul").style.display = "block"));
+
+    if (
+      showNav === (document.getElementById("nav-ul").style.display = "block")
+    ) {
+      setToggle((document.getElementById("nav-ul").style.display = "none"));
+    }
   };
+
   return (
     <div id="navbar-main">
       <div id="navbar-div">
         <nav>
           <div id="toggle">
-            <i onClick={handle} class="fa fa-bars menu" aria-hidden="true"></i>
+            <i
+              onClick={handle}
+              value={showNav}
+              class="fa fa-bars menu"
+              aria-hidden="true"
+            ></i>
           </div>
           <ul id="nav-ul">
             <li>

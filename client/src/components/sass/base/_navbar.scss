@@ -32,6 +32,7 @@ nav ul li {
   display: none;
 }
 
+// media query
 @media (max-width: 768px) {
   #toggle {
     display: block;
@@ -43,8 +44,8 @@ nav ul li {
 
   #navbar-div {
     nav ul {
-      display: block;
-      // display: none;
+      // display: block;
+      display: none;
       width: 100%;
     }
 
