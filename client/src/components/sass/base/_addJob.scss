@@ -1,3 +1,7 @@
+#form-padding {
+  padding-bottom: 1rem;
+}
+
 #post-main {
   display: flex;
   background-color: black;
@@ -90,7 +94,97 @@
 }
 
 #error-div {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #ff3030;
-  font-weight: 700;
+  font-weight: 400;
 }
+
+// MEDIA QUERIES BELOW //
+
+//media query 300 - 360px
+@media screen and (min-width: 300px) and (max-width: 360px) {
+  #form-padding {
+    padding-top: 1rem;
+  }
+
+  #post-main {
+    textarea {
+      font-size: 0.4rem;
+      width: 13rem;
+    }
+
+    button {
+      height: 1.1rem;
+      width: 6rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  #post-secondary {
+    height: 20rem;
+    width: 16rem;
+  }
+
+  #form-main {
+    h2 {
+      font-size: 0.8rem;
+    }
+
+    input {
+      font-size: 0.6rem;
+      width: 13rem;
+      height: 0.7rem;
+    }
+  }
+
+  #error-div {
+    font-size: 0.5rem;
+    color: #ff3030;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+}
+
+//MEDIA QUERY - 361 - 480PX
+// @media screen and (min-width: 361px) and (max-width: 480px) {
+//   #form-padding {
+//     padding-bottom: 3rem;
+//   }
+
+//   #post-main {
+//     textarea {
+//       font-size: 0.7rem;
+//       width: 13rem;
+//     }
+
+//     button {
+//       height: 1.5rem;
+//       width: 6rem;
+//       font-size: 1rem;
+//     }
+//   }
+
+//   #post-secondary {
+//     height: 34rem;
+//     width: 16rem;
+//   }
+
+//   #form-main {
+//     h2 {
+//       font-size: 1.1rem;
+//     }
+
+//     input {
+//       font-size: 0.7rem;
+//       width: 13rem;
+//       height: 1.8rem;
+//     }
+//   }
+
+//   #error-div {
+//     font-size: 0.6rem;
+//     color: #ff3030;
+//     font-weight: 400;
+//     font-family: sans-serif;
+//   }
+// }
