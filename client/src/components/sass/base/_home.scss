@@ -76,15 +76,29 @@
   flex-direction: column;
 }
 
-//MEDIA QUERY - 320PX
-@media screen and (max-width: 320px) {
+// MEDIA QUERIES BELOW //
+
+//MEDIA QUERY - 360PX
+@media screen and (max-width: 360px) {
+  #home-main {
+    button {
+      height: 1.3rem;
+      font-size: 0.7rem;
+      width: 6rem;
+    }
+  }
+
+  #btn-div {
+    padding-bottom: 1rem;
+  }
+
   #main-title {
-    font-size: 2.1rem;
+    font-size: 1.4rem;
     padding-bottom: 0.3rem;
   }
 
   #sec-title {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
     font-family: sans-serif;
   }
@@ -111,13 +125,25 @@
 
 //MEDIA QUERY - 480px
 @media screen and (max-width: 480px) {
+  #home-main {
+    button {
+      height: 1.3rem;
+      font-size: 0.7rem;
+      width: 6rem;
+    }
+  }
+
+  #btn-div {
+    padding-bottom: 1rem;
+  }
+
   #main-title {
     font-size: 2rem;
     padding-bottom: 0.3rem;
   }
 
   #sec-title {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
     font-family: sans-serif;
     word-spacing: 0rem;
@@ -142,35 +168,92 @@
   }
 }
 
-//media query 600px
-// @media screen and (min-width: 481) and (max-width: 600px) {
-//   #main-title {
-//     font-size: 3rem;
-//     padding-bottom: 0.3rem;
-//   }
+//MEDIA QUERY - 481 - 715PX
+@media screen and (min-width: 481px) and (max-width: 715px) {
+  #home-main {
+    button {
+      height: 1.5rem;
+      font-size: 0.7rem;
+      width: 6rem;
+    }
+  }
 
-//   #sec-title {
-//     font-size: 01rem;
-//     text-align: center;
-//     font-family: sans-serif;
-//     word-spacing: 0rem;
-//   }
+  #btn-div {
+    padding-bottom: 3rem;
+  }
 
-//   #home-main {
-//     input {
-//       font-size: 1rem;
-//       text-align: center;
-//       width: 18rem;
-//       height: 2rem;
-//     }
-//   }
-//   html,
-//   body {
-//     overflow-x: hidden;
-//     overflow-y: hidden;
-//   }
+  #main-title {
+    font-size: 2.5rem;
+    padding-bottom: 0.3rem;
+  }
 
-//   body {
-//     position: relative;
-//   }
-// }
+  #sec-title {
+    font-size: 0.7rem;
+    text-align: center;
+    font-family: sans-serif;
+    word-spacing: 0rem;
+  }
+
+  #home-main {
+    input {
+      font-size: 1rem;
+      text-align: center;
+      width: 18rem;
+      height: 2rem;
+    }
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+}
+
+//MEDIA QUERY - 768 - 769PX
+@media screen and (min-width: 768px) and (max-width: 769px) {
+  #home-main {
+    button {
+      height: 1.3rem;
+      font-size: 0.7rem;
+      width: 6rem;
+    }
+  }
+
+  #btn-div {
+    padding-bottom: 1rem;
+  }
+
+  #main-title {
+    font-size: 2.8rem;
+    padding-bottom: 0.3rem;
+  }
+
+  #sec-title {
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: sans-serif;
+    word-spacing: 0rem;
+  }
+
+  #home-main {
+    input {
+      font-size: 1rem;
+      text-align: center;
+      width: 18rem;
+      height: 2rem;
+    }
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+}

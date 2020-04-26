@@ -26,13 +26,14 @@ nav ul li {
   color: white;
   background-color: black;
   width: 100%;
-  padding: 10px 20px;
+  padding: 2px 20px;
   text-align: right;
   box-sizing: border-box;
   font-size: 2rem;
   display: none;
 }
 
+/// MEDIA QUERY BELOW ///
 // media query 768px
 @media (max-width: 768px) {
   #toggle {
@@ -55,6 +56,7 @@ nav ul li {
       text-align: center;
       padding: 0.3rem;
       font-family: sans-serif;
+      font-size: 0.8rem;
     }
   }
 
