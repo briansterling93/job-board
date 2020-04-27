@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { StateContext } from "../contexts/StateContext.js";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import swal from "sweetalert";
 
 const AddJob = () => {
   const { state, dispatch } = useContext(StateContext); //context
@@ -14,6 +15,11 @@ const AddJob = () => {
   const [descripError, setDescripError] = useState("");
   const [contactError, setContactError] = useState("");
   // error handling wrap (state)
+
+  //success pop up
+  // const popUp = () => {
+  //   swal("Your Job has been posted!", "", "success");
+  // };
 
   //POST new job to backend/sql database
   const onSubmit = async (e) => {
@@ -75,6 +81,7 @@ const AddJob = () => {
       const body = JSON.stringify(newJob);
 
       const res = await axios.post("/jobs/add", body, config);
+
       console.log(res);
 
       // reset values
@@ -83,6 +90,8 @@ const AddJob = () => {
           type: "CLEAR_FORM",
         });
       }
+
+      await swal("Your Job has been posted!", "", "success");
 
       console.log(res.data);
     } catch (error) {
@@ -99,6 +108,7 @@ const AddJob = () => {
               <div className="form-input">
                 <h2>Job Title</h2>
                 <input
+                  maxLength="25"
                   value={state.title}
                   onChange={(e) =>
                     dispatch({ type: "UPDATE_TITLE", payload: e.target.value })
@@ -121,6 +131,7 @@ const AddJob = () => {
               <div className="form-input">
                 <h2>Salary</h2>
                 <input
+                  maxLength="20"
                   value={state.salary}
                   onChange={(e) =>
                     dispatch({ type: "UPDATE_SALARY", payload: e.target.value })
@@ -135,6 +146,7 @@ const AddJob = () => {
                 <textarea
                   rows="3"
                   cols="50"
+                  maxLength="200"
                   value={state.descrip}
                   onChange={(e) =>
                     dispatch({

@@ -18,7 +18,7 @@ const Home = () => {
 
         await dispatch({
           type: "QUERY_JOB",
-          payload: findQuery.map((i) => (
+          payload: findQuery.reverse().map((i) => (
             <ul>
               <li key={i.length}>
                 <div id="test2">
@@ -125,6 +125,7 @@ const Home = () => {
               onChange={handleSearch}
               placeholder="Enter a technology (React, Node, Etc..)"
             />
+
             <div id="btn-div">
               <NavLink to="/jobs/queried">
                 <button onClick={handleError} id="home-btn">
