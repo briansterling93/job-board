@@ -14,6 +14,12 @@ const AddJob = () => {
   const [salaryError, setSalaryError] = useState("");
   const [descripError, setDescripError] = useState("");
   const [contactError, setContactError] = useState("");
+  const [successPop, setSuccess] = useState({
+    title: "Your Job has been posted!",
+    icon: "success",
+    timer: 3000,
+  });
+
   // error handling wrap (state)
 
   //success pop up
@@ -84,14 +90,18 @@ const AddJob = () => {
 
       console.log(res);
 
+      if (res.data.findAll) {
+        swal(successPop);
+      } else {
+        console.log("");
+      }
+
       // reset values
       if ((title, tech_stack, salary, descrip, contact)) {
         dispatch({
           type: "CLEAR_FORM",
         });
       }
-
-      await swal("Your Job has been posted!", "", "success");
 
       console.log(res.data);
     } catch (error) {
