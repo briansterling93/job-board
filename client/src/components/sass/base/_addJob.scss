@@ -173,6 +173,10 @@
     }
   }
 
+  .form-input {
+    padding: 0.3rem;
+  }
+
   #post-secondary {
     height: 23rem;
     width: 16rem;
@@ -192,15 +196,15 @@
   }
 
   #error-div {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     color: #ff3030;
     font-weight: 400;
     font-family: sans-serif;
   }
 }
 
-//media query - landscape
-@media screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+//media query - LANDSCAPE
+@media screen and (min-width: 480px) and (max-width: 600px) and (orientation: landscape) {
   #post-main {
     textarea {
       font-size: 0.8rem;
@@ -236,9 +240,57 @@
   }
 
   #error-div {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     color: #ff3030;
     font-weight: 400;
     font-family: sans-serif;
+  }
+}
+
+//media query - LANDSCAPE
+@media screen and (min-width: 601px) and (max-width: 1000px) and (orientation: landscape) {
+  #post-main {
+    textarea {
+      font-size: 0.9rem;
+      width: 13rem;
+    }
+
+    button {
+      height: 1rem;
+      width: 6rem;
+      font-size: 0.7rem;
+    }
+  }
+  .form-input {
+    padding: 0.1rem;
+  }
+
+  #post-secondary {
+    height: 18rem;
+    width: 20rem;
+  }
+
+  #form-main {
+    h2 {
+      font-size: 0.6rem;
+    }
+
+    input {
+      font-size: 0.5rem;
+      width: 13rem;
+      height: 0.9rem;
+      padding-top: 0.3rem;
+    }
+  }
+
+  #error-div {
+    font-size: 0.5rem;
+    color: #ff3030;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+
+  #form-padding {
+    padding-bottom: 2rem;
   }
 }
