@@ -50,12 +50,24 @@
     border: 0.5px solid black;
     cursor: pointer;
   }
+
+  button:link,
+  button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-size: 1.6rem;
+  }
 }
 #post-secondary {
   display: flex;
   justify-content: center;
   height: 41rem;
   width: 34rem;
+  animation: moveInLeft 0.5s;
   opacity: 0.8;
   border-radius: 1rem;
   background-color: black;
@@ -103,21 +115,21 @@
 
 //media query 300 - 360px
 @media screen and (min-width: 300px) and (max-width: 360px) {
-  #form-padding {
-    padding-top: 1rem;
-  }
-
   #post-main {
     textarea {
-      font-size: 0.4rem;
+      font-size: 0.7rem;
       width: 13rem;
     }
 
     button {
       height: 1.1rem;
-      width: 6rem;
-      font-size: 0.7rem;
+      width: 5rem;
+      font-size: 0.8rem;
     }
+  }
+
+  .form-input {
+    padding: 0.3rem;
   }
 
   #post-secondary {
@@ -131,9 +143,10 @@
     }
 
     input {
-      font-size: 0.6rem;
+      font-size: 0.56rem;
       width: 13rem;
-      height: 0.7rem;
+      height: 0.9rem;
+      padding-top: 0.3rem;
     }
   }
 
@@ -145,46 +158,87 @@
   }
 }
 
-//MEDIA QUERY - 361 - 480PX
-// @media screen and (min-width: 361px) and (max-width: 480px) {
-//   #form-padding {
-//     padding-bottom: 3rem;
-//   }
+//media query 361 - 480px
+@media screen and (min-width: 361px) and (max-width: 600px) {
+  #post-main {
+    textarea {
+      font-size: 0.8rem;
+      width: 13rem;
+    }
 
-//   #post-main {
-//     textarea {
-//       font-size: 0.7rem;
-//       width: 13rem;
-//     }
+    button {
+      height: 1.1rem;
+      width: 6rem;
+      font-size: 0.7rem;
+    }
+  }
 
-//     button {
-//       height: 1.5rem;
-//       width: 6rem;
-//       font-size: 1rem;
-//     }
-//   }
+  #post-secondary {
+    height: 23rem;
+    width: 16rem;
+  }
 
-//   #post-secondary {
-//     height: 34rem;
-//     width: 16rem;
-//   }
+  #form-main {
+    h2 {
+      font-size: 1rem;
+    }
 
-//   #form-main {
-//     h2 {
-//       font-size: 1.1rem;
-//     }
+    input {
+      font-size: 0.7rem;
+      width: 13rem;
+      height: 0.9rem;
+      padding-top: 0.3rem;
+    }
+  }
 
-//     input {
-//       font-size: 0.7rem;
-//       width: 13rem;
-//       height: 1.8rem;
-//     }
-//   }
+  #error-div {
+    font-size: 0.6rem;
+    color: #ff3030;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+}
 
-//   #error-div {
-//     font-size: 0.6rem;
-//     color: #ff3030;
-//     font-weight: 400;
-//     font-family: sans-serif;
-//   }
-// }
+//media query - landscape
+@media screen and (min-width: 500px) and (max-width: 900px) and (orientation: landscape) {
+  #post-main {
+    textarea {
+      font-size: 0.8rem;
+      width: 13rem;
+    }
+
+    button {
+      height: 1rem;
+      width: 6rem;
+      font-size: 0.7rem;
+    }
+  }
+  .form-input {
+    padding: 0.1rem;
+  }
+
+  #post-secondary {
+    height: 17rem;
+    width: 20rem;
+  }
+
+  #form-main {
+    h2 {
+      font-size: 0.6rem;
+    }
+
+    input {
+      font-size: 0.5rem;
+      width: 13rem;
+      height: 0.9rem;
+      padding-top: 0.3rem;
+    }
+  }
+
+  #error-div {
+    font-size: 0.4rem;
+    color: #ff3030;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+}

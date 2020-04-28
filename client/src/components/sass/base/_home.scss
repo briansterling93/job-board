@@ -46,12 +46,34 @@
     height: 2rem;
     font-size: 1rem;
     width: 7rem;
+    font-weight: 600;
     background-color: black;
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 1rem;
+  }
+
+  button:link,
+  button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-size: 1.6rem;
+  }
+
+  button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  button:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -74,10 +96,11 @@
 }
 
 #sec-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #38a1eb;
   font-family: sans-serif;
-  // color: #efcf00;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
   text-transform: capitalize;
   padding-bottom: 3.5rem;
@@ -102,6 +125,16 @@
       height: 1.3rem;
       font-size: 0.7rem;
       width: 6rem;
+    }
+
+    button:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    button:active {
+      transform: none;
+      box-shadow: none;
     }
   }
 
@@ -148,6 +181,16 @@
       font-size: 0.7rem;
       width: 6rem;
     }
+
+    button:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    button:active {
+      transform: none;
+      box-shadow: none;
+    }
   }
 
   #btn-div {
@@ -193,6 +236,16 @@
       font-size: 0.7rem;
       width: 6rem;
     }
+
+    button:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    button:active {
+      transform: none;
+      box-shadow: none;
+    }
   }
 
   #btn-div {
@@ -237,6 +290,16 @@
       height: 1.3rem;
       font-size: 0.7rem;
       width: 6rem;
+    }
+
+    button:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    button:active {
+      transform: none;
+      box-shadow: none;
     }
   }
 

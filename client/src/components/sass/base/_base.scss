@@ -10,3 +10,44 @@ $off-white: #ececec;
 body {
   background-color: #999;
 }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translatex(-2rem);
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  60% {
+    opacity: 0.4;
+  }
+
+  80% {
+    opacity: 0.6;
+    // transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
