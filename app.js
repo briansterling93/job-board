@@ -1,6 +1,8 @@
 const express = require("express");
 const mysql = require("mysql");
 
+const PORT = process.env.PORT || 5000;
+
 const db = require("./config/database.js");
 
 db.authenticate(async () => {
@@ -22,6 +24,6 @@ app.get("/", (req, res) => {
 //job routes
 app.use("/jobs", require("./routes/jobs.js"));
 
-app.listen("5000", () => {
-  console.log("app running");
+app.listen(PORT, () => {
+  console.log(`App running on Port ${PORT}`);
 });
