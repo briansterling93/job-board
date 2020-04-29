@@ -87,9 +87,6 @@ const AllJobs = () => {
   return (
     <div id="all-main">
       <div id="all-secondary">
-        {/* <div id="page-title">
-          <h1>Current Openings</h1>
-        </div> */}
         <div>{jobBoard}</div>
       </div>
     </div>

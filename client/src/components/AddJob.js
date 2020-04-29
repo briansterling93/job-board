@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { StateContext } from "../contexts/StateContext.js";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -14,7 +13,7 @@ const AddJob = () => {
   const [salaryError, setSalaryError] = useState("");
   const [descripError, setDescripError] = useState("");
   const [contactError, setContactError] = useState("");
-  const [successPop, setSuccess] = useState({
+  const [successPop] = useState({
     title: "Your Job has been posted!",
     icon: "success",
     background: "white",

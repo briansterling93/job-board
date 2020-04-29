@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { StateContext } from "../contexts/StateContext.js";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 const Home = () => {
