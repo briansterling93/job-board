@@ -20,7 +20,7 @@ const AddJob = () => {
     color: "white",
     width: "17rem",
     height: "15rem",
-    timer: 2500,
+    timer: 7500,
   });
 
   //POST new job to backend/sql database
@@ -136,14 +136,20 @@ const AddJob = () => {
               </div>
               <div className="form-input">
                 <h2>Salary</h2>
-                <input
-                  maxLength="20"
-                  value={state.salary}
-                  onChange={(e) =>
-                    dispatch({ type: "UPDATE_SALARY", payload: e.target.value })
-                  }
-                  placeholder="Annual Salary"
-                />
+                <span id="money-symbol">
+                  <span id="money-div">$</span>
+                  <input
+                    maxLength="20"
+                    value={state.salary}
+                    onChange={(e) =>
+                      dispatch({
+                        type: "UPDATE_SALARY",
+                        payload: e.target.value,
+                      })
+                    }
+                    // placeholder="Annual Salary/Hourly, etc.."
+                  />
+                </span>
                 <div id="error-div">{salaryError}</div>
               </div>
               <div className="form-input">
