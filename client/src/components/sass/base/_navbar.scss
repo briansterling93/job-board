@@ -25,6 +25,7 @@ nav ul li {
 #toggle {
   color: white;
   background-color: black;
+
   width: 100%;
   padding: 2px 20px;
   text-align: right;
@@ -35,7 +36,7 @@ nav ul li {
 
 /// MEDIA QUERY BELOW ///
 // media query 768px
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   #toggle {
     display: block;
   }

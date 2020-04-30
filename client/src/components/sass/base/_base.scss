@@ -36,10 +36,10 @@ body {
   }
 }
 
-@keyframes moveInRight {
+@keyframes moveInDown {
   0% {
     opacity: 0;
-    transform: translateX(10rem);
+    transform: translatey(10rem);
   }
 
   80% {
