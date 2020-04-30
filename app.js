@@ -4,13 +4,13 @@ const path = require("path");
 
 const db = require("./config/database.js");
 
-db.authenticate(async () => {
-  try {
-    console.log("db connected");
-  } catch (error) {
-    console.log(error);
-  }
-});
+// db.authenticate(async () => {
+//   try {
+//     console.log("db connected");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 const app = express();
 
@@ -28,6 +28,12 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const PORT = process.env.PORT || 5000;
+
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log("running");
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`App running on Port ${PORT}`);
