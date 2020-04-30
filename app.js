@@ -29,12 +29,6 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT || 5000;
 
-db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log("running");
-  });
-});
-
 app.listen(PORT, () => {
   console.log(`App running on Port ${PORT}`);
 });

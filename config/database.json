@@ -1,13 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "gigs_app",
-    "host": "127.0.0.1",
+    "username": "srd07hzytzoh27gu",
+    "password": "k3dhal92max0ftg7",
+    "database": "qaubet5jf4lj5o4h",
+    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
+
+  "test": {
+    "username": "srd07hzytzoh27gu",
+    "password": "k3dhal92max0ftg7",
+    "database": "qaubet5jf4lj5o4h",
+    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "srd07hzytzoh27gu",
+    "password": "k3dhal92max0ftg7",
+    "database": "qaubet5jf4lj5o4h",
+    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
