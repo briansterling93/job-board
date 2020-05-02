@@ -113,18 +113,25 @@ const AddJob = () => {
             <div id="form-secondary">
               <div className="form-input">
                 <h2>Job Title</h2>
-                <input
-                  maxLength="25"
-                  value={state.title}
-                  onChange={(e) =>
-                    dispatch({ type: "UPDATE_TITLE", payload: e.target.value })
-                  }
-                  placeholder="Job Title"
-                />
+                <span className="input-detail-padding">
+                  <input
+                    maxLength="25"
+                    value={state.title}
+                    onChange={(e) =>
+                      dispatch({
+                        type: "UPDATE_TITLE",
+                        payload: e.target.value,
+                      })
+                    }
+                    placeholder="Job Title"
+                  />
+                </span>
                 <div id="error-div">{titleError}</div>
               </div>
+
               <div className="form-input">
                 <h2>Technologies Required</h2>
+
                 <input
                   value={state.tech_stack}
                   onChange={(e) =>
@@ -132,14 +139,17 @@ const AddJob = () => {
                   }
                   placeholder="Python, C#, Java, React, etc.."
                 />
+
                 <div id="error-div">{techError}</div>
               </div>
               <div className="form-input">
                 <h2>Salary</h2>
+
                 <span id="money-symbol">
                   <span id="money-div">$</span>
                   <input
                     maxLength="20"
+                    type="number"
                     value={state.salary}
                     onChange={(e) =>
                       dispatch({
@@ -150,6 +160,7 @@ const AddJob = () => {
                     // placeholder="Annual Salary/Hourly, etc.."
                   />
                 </span>
+
                 <div id="error-div">{salaryError}</div>
               </div>
               <div className="form-input">
@@ -166,12 +177,14 @@ const AddJob = () => {
                       payload: e.target.value,
                     })
                   }
-                  placeholder="Describe The Details Of This Position"
+                  placeholder="Position details.."
                 ></textarea>
+
                 <div id="error-div">{descripError}</div>
               </div>
               <div className="form-input">
                 <h2>Contact Email</h2>
+
                 <input
                   value={state.contact}
                   onChange={(e) =>
@@ -182,6 +195,7 @@ const AddJob = () => {
                   }
                   placeholder="Contact Email Address"
                 />
+
                 <div id="error-div">{contactError}</div>
               </div>
               <div className="form-input">

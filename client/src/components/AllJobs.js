@@ -38,40 +38,42 @@ const AllJobs = () => {
                       <div className="job-detail">
                         <span id="job-detail-salary">{i.salary}</span>
                       </div>
-                      <div className="job-detail">
-                        <ol>
-                          <li>
-                            <span className="job-detail-title">
-                              Requirements:
-                            </span>{" "}
-                            {i.tech_stack}
-                          </li>
-                        </ol>
-                      </div>
-                      <div id="job-detail-description" className="job-detail">
-                        <ol>
-                          <li>{i.descrip}</li>
-                        </ol>
-                      </div>
+                      <span id="job-criteria-padding">
+                        <div className="job-detail">
+                          <ol>
+                            <li>
+                              <span className="job-detail-title">
+                                Requirements:
+                              </span>{" "}
+                              {i.tech_stack}
+                            </li>
+                          </ol>
+                        </div>
+                        <div id="job-detail-description" className="job-detail">
+                          <ol>
+                            <li>{i.descrip}</li>
+                          </ol>
+                        </div>
 
-                      <div className="job-detail">
-                        <ol>
-                          <li>
-                            <span className="job-detail-title">Contact:</span>{" "}
-                            {i.contact}
-                          </li>
-                        </ol>
-                      </div>
-                      <div className="job-detail">
-                        <ol>
-                          <li>
-                            <span className="job-detail-title">
-                              Date Posted:
-                            </span>{" "}
-                            {i.createdAt}
-                          </li>
-                        </ol>
-                      </div>
+                        <div className="job-detail">
+                          <ol>
+                            <li>
+                              <span className="job-detail-title">Contact:</span>{" "}
+                              {i.contact}
+                            </li>
+                          </ol>
+                        </div>
+                        <div className="job-detail">
+                          <ol>
+                            <li>
+                              <span className="job-detail-title">
+                                Date Posted:
+                              </span>{" "}
+                              {i.createdAt}
+                            </li>
+                          </ol>
+                        </div>
+                      </span>
                     </div>
                   </div>
                 </div>

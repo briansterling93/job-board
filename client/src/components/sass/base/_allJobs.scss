@@ -17,6 +17,10 @@
   background-size: cover;
 }
 
+#job-criteria-padding {
+  padding-left: 0.5rem;
+}
+
 #page-title {
   font-size: 0.9rem;
   padding-bottom: 1rem;
@@ -46,19 +50,20 @@
   font-weight: 550;
   font-size: 1.5rem;
   text-align: center;
+  padding-top: 0.3rem;
 }
 
 #test1 {
   animation: moveInLeft 0.5s;
-  background-color: black;
-  color: white;
+  background-color: white !important;
+  color: black !important;
   height: 14.5rem;
   padding: 0.4rem;
-  opacity: 0.7;
+  opacity: 0.9;
   width: 38rem;
   overflow-y: auto;
   border-radius: 0.3rem;
-  border-bottom: 1px solid #38a1eb;
+  border-bottom: 2px solid #38a1eb;
 }
 
 #test2 {
@@ -71,9 +76,10 @@
 }
 
 .job-detail-title {
-  font-weight: 400;
+  font-weight: 600 !important;
   font-size: 1.1rem;
-  color: #ababab;
+  // color: #ababab;
+  color: black !important;
   letter-spacing: 0.1rem;
 }
 
