@@ -47,10 +47,15 @@
 }
 
 .job-title {
-  font-weight: 550;
+  font-weight: 600;
   font-size: 1.5rem;
   text-align: center;
-  padding-top: 0.3rem;
+  padding-top: 0.2rem;
+  color: #25699e;
+}
+
+.job-title:hover {
+  text-decoration: underline;
 }
 
 #test1 {
@@ -59,11 +64,11 @@
   color: black !important;
   height: 14.5rem;
   padding: 0.4rem;
-  opacity: 0.9;
+  opacity: 0.8;
   width: 38rem;
   overflow-y: auto;
   border-radius: 0.3rem;
-  border-bottom: 2px solid #38a1eb;
+  border-bottom: 2px solid #25699e;
 }
 
 #test2 {
@@ -107,7 +112,7 @@
     color: white;
     height: 10.8rem;
     padding: 0.4rem;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 14rem;
     overflow-y: auto;
     border-radius: 0.3rem;
@@ -143,9 +148,9 @@
   #test1 {
     background-color: black;
     color: white;
-    height: 10rem;
+    height: 10.5rem;
     padding: 0.4rem;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 19rem;
     overflow-y: auto;
     border-radius: 0.3rem;
@@ -181,9 +186,9 @@
   #test1 {
     background-color: black;
     color: white;
-    height: 10.6rem;
+    height: 11.1rem;
     padding: 0.4rem;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 20rem;
     overflow-y: auto;
     border-radius: 0.3rem;
@@ -221,7 +226,7 @@
     color: white;
     height: 12rem;
     padding: 0.4rem;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 30rem;
     overflow-y: auto;
     border-radius: 0.3rem;

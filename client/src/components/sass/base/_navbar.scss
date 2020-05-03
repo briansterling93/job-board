@@ -36,10 +36,14 @@ nav ul li {
 
 /// MEDIA QUERY BELOW ///
 // media query 768px
-@media (max-width: 500px) {
+@media screen and (max-width: 900px) {
   #toggle {
     display: block;
   }
+
+  // #navbar-main {
+  //   background-color: #111111;
+  // }
 
   #navbar-main {
     background-color: #111111;

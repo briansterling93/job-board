@@ -23,7 +23,7 @@ const Navbar = () => {
             <i
               onClick={handle}
               value={showNav}
-              class="fa fa-bars menu"
+              className="fa fa-bars menu"
               aria-hidden="true"
             ></i>
           </div>

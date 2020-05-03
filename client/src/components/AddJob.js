@@ -48,7 +48,7 @@ const AddJob = () => {
       }
 
       if (!salary) {
-        setSalaryError("Please enter the annual salary for this postion");
+        setSalaryError("Please enter the salary details for this postion");
       }
 
       if (salary) {
@@ -68,9 +68,15 @@ const AddJob = () => {
         setContactError("Please enter a valid email address");
       }
 
-      if (contact) {
+      if (state.contact.includes("@" && ".") === true) {
         setContactError("");
+      } else {
+        setContactError("Please enter a valid email address");
       }
+
+      // if (contact) {
+      //   setContactError("");
+      // }
       //Error Handling Wrap (above)
 
       //success & update backend (below)
@@ -92,8 +98,7 @@ const AddJob = () => {
         console.log("");
       }
 
-      // reset values
-      if ((title, tech_stack, salary, descrip, contact)) {
+      if (title && tech_stack && salary && descrip && contact) {
         dispatch({
           type: "CLEAR_FORM",
         });
@@ -149,7 +154,6 @@ const AddJob = () => {
                   <span id="money-div">$</span>
                   <input
                     maxLength="20"
-                    type="number"
                     value={state.salary}
                     onChange={(e) =>
                       dispatch({
@@ -157,7 +161,6 @@ const AddJob = () => {
                         payload: e.target.value,
                       })
                     }
-                    // placeholder="Annual Salary/Hourly, etc.."
                   />
                 </span>
 
